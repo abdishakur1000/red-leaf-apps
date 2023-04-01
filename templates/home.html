@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Red Leaf Petroleum </title>
+     <div class="container">
+       <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
+  Red Leaf Petroleum
+</div>
+    
+       <div class="container">
+       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2 mt-4 mb-0" type="button">Login</button>
+  <button class="btn btn-primary mt-4 mb-0" type="button">Sign up</button>
+</div>
+       
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(255,0,0);
-        text-align: center;
-      }
-
-      #red {
-        width: 100%;
+      #banner {
         height: 360px;
+        width: 80px;
         object-fit: cover;
-      }
-      h2 {
-        font-family: Roboto;
-        font: size; 32px;
-        color: rgb(200,0,0);
-        text-align: center;
-        font-weight: normal;
-      }
-
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80,80,180);
-      }
-      #container {
-        max-width: 720px;
-        margin: 0 auto 0 auto;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-   <h1>Red Leaf Petroleum Careers </h1>
-    <img id="red" src="https://red-leaf-app.abdishakur1000.repl.co/static/red.jpeg">
-    <h2> About Red leaf Petrpleum </h2>
-    <p class="bodytext">Redleaf is privately -owned, engaged in the
+    <div class="container" >
+   <h1 class="text-center mt-0 mb-4">{{company_name}} Careers </h1>
+    <img class="img-fluid" id="red" src="https://red-leaf-app.abdishakur1000.repl.co/static/red.jpeg">
+    <h2 class="text-center mt-4 mb-4"> About {{company_name}} </h2>
+    <p class="lead">Redleaf is privately -owned, engaged in the
 business of energy trading and has global
 market coverage through its network of
 affiliates and agencies in Middle East.
-Redleaf Petroleum LLC is UK based
+{{company_name}} LLC is UK based
 integrated oil and gas aiming to be within
 the energy and maritime sectors, primarily
 operating from LONDON, UNITED KINGDOM
@@ -86,11 +77,20 @@ words, we build partnership with key
 business decision makers, in highly
 competitive environments that demands
 continues improvement.</p>
-    <h2>Open Postions </h2>
-    <p class="bodytext">TODO - show the jobs here </p>
-    <div style="text-align:center">
-    <button>Cuntact us </button>
-      <p>Copyright 2023, Red leaf Petroleum </p>
+    <h2 class="text-center mt-4 mb-4">Open Postions </h2>
+    <div >
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+    <div class="text-center">
+    <button class="btn btn-primary btn-lg">Cuntact us </button>
+      
+      <p class="mt-4 mb-4">Copyright 2023, Red leaf Petroleum </p>
+       <div class="container">
+       <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
+  Abdishakur
+</div>
     </div>
   </div>
   </body>

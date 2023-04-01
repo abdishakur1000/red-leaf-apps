@@ -10,16 +10,21 @@
     <style>
       #banner {
         height: 360px;
-        width: 80px;
+        width: 1980px;
         object-fit: cover;
+        margin: auto;
       }
     </style>
   </head>
   <body>
     {%include 'nav.html' %}
+    <img class="img-fluid " id="banner" src="https://red-leaf-app.abdishakur1000.repl.co/static/banner.jpeg" >
+    
+    <h1 class="text-center mt-0 mb-4">{{company_name}} Careers </h1>
+     
     <div class="container" >
-   <h1 class="text-center mt-0 mb-4">{{company_name}} Careers </h1>
-    <img class="img-fluid" id="red" src="https://red-leaf-app.abdishakur1000.repl.co/static/red.jpeg">
+   
+   
     <h2 class="text-center mt-4 mb-4"> About {{company_name}} </h2>
     <p class="lead">Redleaf is privately -owned, engaged in the
 business of energy trading and has global
@@ -77,12 +82,13 @@ continues improvement.</p>
     <div class="text-center">
     <button class="btn btn-primary btn-lg">Cuntact us </button>
       
-      <p class="mt-4 mb-4">Copyright 2023, Red leaf Petroleum </p>
+      
        <div class="container">
-       <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
+<!--        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
   Abdishakur
-</div>
+</div> -->
     </div>
   </div>
+      {% include 'footer.html' %}
   </body>
 </html>

@@ -19,14 +19,16 @@
   <body>
     {%include 'nav.html' %}
     <img class="img-fluid " id="banner" src="https://red-leaf-app.abdishakur1000.repl.co/static/banner.jpeg" >
-    
-    <h1 class="text-center mt-0 mb-4">{{company_name}} Careers </h1>
-     
-    <div class="container" >
-   
-   
-    <h2 class="text-center mt-4 mb-4"> About {{company_name}} </h2>
-    <p class="lead">Redleaf is privately -owned, engaged in the
+    <div class="container" >  
+      
+    <h1 class="text-center mt-4 mb-4"> {{company_name}} </h1>
+    <h2 class="text-center mt-0 mb-4">
+      {{company_name}} Careers
+    </h2>        
+    <div class="row" style="margin-bottom:64px;">
+      <div class="col-md-6">
+    <p class="lead">
+      Redleaf is privately -owned, engaged in the
 business of energy trading and has global
 market coverage through its network of
 affiliates and agencies in Middle East.
@@ -72,7 +74,14 @@ lifestyles offered to each region. In other
 words, we build partnership with key
 business decision makers, in highly
 competitive environments that demands
-continues improvement.</p>
+continues improvement.
+    </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img src="/static/red.jpeg" style="height:320px; border-radius:4px;">
+      </div>
+      
+  </div>
     <h2 class="text-center mt-4 mb-4 border border-black">JOB OPENINGS </h2>
     <div >
       {% for job in jobs %}
